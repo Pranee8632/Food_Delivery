@@ -1,0 +1,12 @@
+-----------Dependencies Used-------------
+ 1>  Express 
+ 2>  Mongoose : Help us to connect with the database
+ 3>  jsonwebtoken : Authentication System
+ 4>  bcrypt: use this to encrpt the user's data and store it in the database
+ 5>  cors : permission to connect the frontend to the backend
+ 6>  dotenv : use the environment variable in the project
+ 7>  body-oarser : we will parse the data coming through the user
+ 8>  Multer : create the image store System
+ 9>  Stripe :Payment gateways on the website
+ 10> Validator : check whether the pass or email is valid or not
+ 

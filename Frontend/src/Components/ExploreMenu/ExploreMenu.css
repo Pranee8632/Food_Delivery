@@ -1,0 +1,78 @@
+.explore-menu{
+    display:flex;
+    flex-direction: column;
+    gap:20px;
+}
+
+.explore-menu h1{
+    color:#262626;
+    font-weight: 500;
+}
+
+.explore-menu-text{
+    max-width: 60%;
+    columns: #808080;
+}
+
+.explore-menu-list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap:30px;
+    text-align: center;
+    margin: 20px 0px;
+    overflow-x:scroll;
+}
+
+.explore-menu-list::-webkit-scrollbar{
+    display: none;
+}
+
+
+.explore-menu-list-item img{
+    width: 7.5vw;
+    min-width:80px;
+    cursor:pointer;
+    border-radius:50%;
+    transition:0.2s;
+}
+    /* Using both width: 7.5vw; and min-width: 80px; to ensure responsiveness while maintaining usability across different screen sizes. */
+
+    /*width: 7.5vw; (Viewport Width)
+    This makes the width responsive to the viewport's width.
+    vw stands for viewport width, meaning 7.5vw will always be 7.5% of the total viewport width.
+    It allows the element to scale dynamically based on the screen size.
+
+    min-width: 80px; (Minimum Width)
+    This ensures that the element never becomes too small.
+    On very small screens, 7.5vw might be less than 80px, which could make the element too tiny.
+    The min-width: 80px; guarantees that the element stays at least 80px wide, even if 7.5vw calculates to something smaller.  */
+
+
+.explore-menu-list-item p{
+    margin-top:10px;
+    color:#747474;
+    font-size: max(1.4vw,16px);
+    cursor:pointer;
+}
+
+.explore-menu-hr{
+    margin:10px 0px;
+    height: 2px;
+    background-color:#e2e2e2;
+    border:none;
+}
+
+
+.explore-menu-list-item .active{
+    border: 4px solid tomato;
+    padding:2px;
+}
+
+
+@media (max-width:1050px){
+    .explore-menu-text{
+        max-width: 100%;
+        font-size: 14px;
+    }
+}

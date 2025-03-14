@@ -1,0 +1,12 @@
+While both Express and Axios are used in Node.js development, they serve different purposes: Express is a web application framework for building servers and managing routes, while 
+Axios is a dedicated library specifically designed to make HTTP requests to external servers, meaning you need Axios to fetch data from other APIs or services within your Node.js application, even if you are using Express to build your backend server. 
+
+
+
+----packages----
+ 1> Axios : we can create the network requests like the POST , GET etc
+ 2> react - toastify : using this we can create the toast notifications easily
+
+ React-Toastify allows you to add notifications to your app with ease.
+
+ 3> react-router-dom
