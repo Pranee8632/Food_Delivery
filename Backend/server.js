@@ -6,7 +6,9 @@ import foodRouter from "./Routes/foodRoute.js";
 import userRouter from "./Routes/userRoute.js";
 import cartRouter from "./Routes/cartRoute.js";
 import orderRouter from "./Routes/orderRoute.js";
+import path from "path";
 
+const __dirname = path.resolve();
 
 
 // app config
@@ -28,6 +30,23 @@ app.use('/images',express.static('uploads')) //the uploads folder will be expose
 app.use('/api/user',userRouter);
 app.use('/api/cart',cartRouter);
 app.use("/api/order",orderRouter);
+
+
+// Serve static files from React build
+app.use(express.static(path.join(__dirname, 'dist')));
+
+// Fix for CSS MIME type error
+app.use((req, res, next) => {
+  if (req.path.endsWith('.css')) {
+    res.setHeader('Content-Type', 'text/css');
+  }
+  next();
+});
+
+// Handle React routes
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'dist', 'index.html'));
+});
 
 
 
