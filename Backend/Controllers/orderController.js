@@ -139,5 +139,3 @@ const updateStatus = async(req,res)=>{
 }
 
 export {placeOrder,verifyOrder,userOrders,listOrders,updateStatus}
-
-// http://localhost:5173
